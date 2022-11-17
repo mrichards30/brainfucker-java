@@ -8,7 +8,7 @@ public class Brainfucker {
     private final StringBuilder output = new StringBuilder();
     private int currentToken = 0;
     private final int[] tape = new int[30_000];
-    private int pointer = 0;
+    private int pointer = 100;
     private int lastOpenBracket = 0;
 
     public Brainfucker(String code) {
