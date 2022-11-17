@@ -1,7 +1,11 @@
 ## brainfucker: a java brainfuck interpreter 
 #### 1 Usage 
-The BrainfuckInterpreter class takes in exactly one argument (your Brainfuck code) and prints the result to the console.
+The BrainfuckInterpreter class takes arguments in the form of either:
+- -raw <paste your Brainfuck code\>
+- -file <file path, e.g. examples/HelloWorld.bf\>
 
-The test class shows a simple Hello world program in Brainfuck and verifies that it returns the correct output. 
+These have the respective aliases -r and -f.
+
+The test class shows a simple Hello world program and verifies it returns the correct output.
 
 #### 2 Why?
