@@ -4,21 +4,20 @@ import java.util.Scanner;
 
 public class Brainfucker {
 
-    private final String code;
-    private final StringBuilder output = new StringBuilder();
-    private int currentToken = 0;
-    private final int[] tape = new int[30_000];
-    private int pointer = 100;
-    private int lastOpenBracket = 0;
+  private final String code;
+  private final StringBuilder output = new StringBuilder();
+  private int currentToken = 0;
+  private final int[] tape = new int[30_000];
+  private int pointer = 100;
+  private int lastOpenBracket = 0;
 
-    public Brainfucker(String code) {
-        this.code = code;
-    }
+  public Brainfucker(String code) { this.code = code; }
 
-    public String execute() throws IllegalTokenException {
-        for (currentToken = 0; currentToken >= 0 && currentToken < code.length(); currentToken++) {
-            char token = code.charAt(currentToken);
-            switch (token) {
+  public String execute() throws IllegalTokenException {
+    for (currentToken = 0; currentToken >= 0 && currentToken < code.length();
+         currentToken++) {
+      char token = code.charAt(currentToken);
+      switch (token) {
                 case '[' -> this.beginLoop();
                 case ']' -> this.endLoop();
                 case '>' -> this.pointer++;
